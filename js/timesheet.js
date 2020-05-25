@@ -39,7 +39,16 @@ function checaLinha(ondeComeca, ondetermina) {
 
     }
     //criar nova linha caso todas estejam ocupadas
-    matrix.push(new Array(7))
+    criaLinha()
+
+    function criaLinha() {
+
+        matrix.push(new Array(7));
+        let linha = document.createElement(" linha l" + matrix.length - 1);
+
+    }
+
+
 
     return matrix.length - 1;
 
@@ -53,7 +62,6 @@ function PreencheColuna(ondeComeca, ondetermina, colorName) {
     for (let i = ondeComeca; i <= ondetermina; i++) {
 
         matrix[linha][i] = 1;
-        let l = document.getElementsByClassName("linha l" + linha);
 
         let c = document.getElementsByClassName("coluna c" + i);
 
@@ -73,5 +81,4 @@ function PreencheColuna(ondeComeca, ondetermina, colorName) {
 //concatnar com o texto existente criando uma nova div, que vai ter q ter a class linha, e data-linha matrix.lenght-1
 PreencheColuna(0, 5, "red")
 PreencheColuna(2, 6, "blue")
-
-//console.log(matrix);
+PreencheColuna(3, 6, "red")
