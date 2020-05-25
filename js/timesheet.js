@@ -8,8 +8,9 @@ var linhas = 3;
 var matrix = [];
 for (var i = 0; i < linhas; i++) {
     matrix[i] = new Array(7);
-
 }
+
+
 
 function checaColunas(linha, ondeComeca, ondetermina) {
     // checa se as colunas de certa linha estão ocupadas
@@ -37,22 +38,32 @@ function checaLinha(ondeComeca, ondetermina) {
         }
 
     }
-
+    //criar nova linha caso todas estejam ocupadas
     matrix.push(new Array(7))
 
     return matrix.length - 1;
 
 }
 
-function PreencheColuna(ondeComeca, ondetermina) {
+function PreencheColuna(ondeComeca, ondetermina, colorName) {
 
     let linha = checaLinha(ondeComeca, ondetermina);
 
 
-    for (var i = ondeComeca; i <= ondetermina; i++) {
+    for (let i = ondeComeca; i <= ondetermina; i++) {
 
         matrix[linha][i] = 1;
+        let l = document.getElementsByClassName("linha l" + linha);
 
+        let c = document.getElementsByClassName("coluna c" + i);
+
+        c[linha].classList.add(colorName);
+
+
+        //console.log('.linha' + " .l" + linha + '.coluna' + " .c" + i);
+
+
+        //substituir por um codigo unico para a tarefa
 
     }
 
@@ -60,13 +71,7 @@ function PreencheColuna(ondeComeca, ondetermina) {
 
 //usar innerhtml
 //concatnar com o texto existente criando uma nova div, que vai ter q ter a class linha, e data-linha matrix.lenght-1
+PreencheColuna(0, 5, "red")
+PreencheColuna(2, 6, "blue")
 
-
-PreencheColuna(0, 6);
-PreencheColuna(0, 6);
-PreencheColuna(0, 6);
-PreencheColuna(0, 6);
-PreencheColuna(0, 6);
-PreencheColuna(0, 6);
-
-console.log(matrix);
+//console.log(matrix);
