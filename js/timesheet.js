@@ -1,6 +1,6 @@
 //window.addEventListener('load', function() {
 
-/* essa linha será responsável por criar o a linha do timesheet*/
+
 
 var linhas = 3;
 
@@ -54,7 +54,7 @@ function checaLinha(ondeComeca, ondetermina) {
 
 }
 
-function PreencheColuna(ondeComeca, ondetermina, colorName) {
+function PreencheColuna(ondeComeca, ondetermina, colorName, nomeTarefa) {
 
     let linha = checaLinha(ondeComeca, ondetermina);
 
@@ -67,18 +67,26 @@ function PreencheColuna(ondeComeca, ondetermina, colorName) {
 
         c[linha].classList.add(colorName);
 
+        if (i == ondeComeca) {
+            c[linha].classList.add("borderRadiusLeft");
+      
+        } else if (i == ondetermina) {
+            c[linha].classList.add("borderRadiusRight");
+        }
 
-        //console.log('.linha' + " .l" + linha + '.coluna' + " .c" + i);
+        c[linha].classList.add("removeBorder");
 
 
+        c.textContent = "aaaaaaa";
         //substituir por um codigo unico para a tarefa
 
     }
 
 }
 
+PreencheColuna(1, 5, "red", "aula")
+PreencheColuna(2, 3, "green")
+PreencheColuna(0, 1, "blue")
+
 //usar innerhtml
 //concatnar com o texto existente criando uma nova div, que vai ter q ter a class linha, e data-linha matrix.lenght-1
-PreencheColuna(0, 5, "red")
-PreencheColuna(2, 6, "blue")
-PreencheColuna(3, 6, "red")
