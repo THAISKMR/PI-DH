@@ -17,11 +17,11 @@
 }
 
 .coluna {
-    size: 4%;
+
     margin-top: 0.5%;
     float: left;
     width: calc(100% / 7);
-    height: calc(15% - 4%);
+    height: 15%;
     padding: 2%;
     box-sizing: border-box;
     text-align: center;
