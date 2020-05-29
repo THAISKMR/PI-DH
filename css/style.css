@@ -1,5 +1,6 @@
 body {
     background-color: #eee;
+<<<<<<< HEAD
 }
 
 
@@ -40,3 +41,13 @@ p{
   
 }
   
+=======
+    height: 100vh;
+}
+
+svg{
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+>>>>>>> 2b4058ed30c784e497de7de87895525dc9964624

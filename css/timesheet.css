@@ -1,6 +1,6 @@
 .timesheet {
     overflow: hidden;
-    background-color: rgb(168, 168, 168);
+    /* background-color: rgb(168, 168, 168); */
 }
 
 .diasDaSemana {
@@ -8,18 +8,21 @@
     width: calc(100% / 7);
     height: 15%;
     padding: 2%;
-    border: 1px black solid;
+    border-left: 1px black solid;
+    border-bottom: 1px black solid;
     box-sizing: border-box;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 3vw;
+    font-weight: bold;
 }
 
 .coluna {
+
+    margin-top: 0.5%;
     float: left;
     width: calc(100% / 7);
     height: 15%;
     padding: 2%;
-    border: 1px black solid;
     box-sizing: border-box;
     text-align: center;
 }
@@ -30,4 +33,27 @@
 
 .blue {
     background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.borderRadiusLeft {
+    border-radius: 45px 0px 0px 45px;
+}
+
+.borderRadiusRight {
+    border-radius: 0px 45px 45px 0px;
+}
+
+.removeBorder {
+    border-left: none;
+    border-right: none;
+}
+
+@media (max-width: 1100px) {
+    /*  .timesheet {
+        overflow-x: scroll;
+    }*/
 }
