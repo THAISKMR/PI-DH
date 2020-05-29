@@ -1,0 +1,8 @@
+.modal {
+position: fixed;
+display: none;
+}
+.button {
+    border-radius: 50px;
+    
+}
